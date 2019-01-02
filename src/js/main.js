@@ -2,6 +2,9 @@ $( document ).ready( function () {
     const fieldsElement  = {
         name: `<div class="action__field action__field--name">
                 <input type="text"
+                    required
+                    name="name"
+                    minlength="2"
                     placeholder="Ваше имя">
                 <img class="action__icon"
                 src="./images/name-icon.png"
@@ -10,6 +13,9 @@ $( document ).ready( function () {
 
         tel: `<div class="action__field action__tel">
                 <input type="tel"
+                    required
+                    name="tel"
+                    minlength="5"
                     placeholder="Ваш телефон">
                 <img class="action__icon"
                 src="./images/phone-icon.png"
@@ -18,7 +24,9 @@ $( document ).ready( function () {
 
         email: `<div class="action__field action__field--email">
                 <input type="email"
-                    placeholder="Ваш телефон">
+                    required
+                    name="email"
+                    placeholder="Ваш e-mail">
                 <img class="action__icon"
                 src="./images/mail-icon.png"
                 alt="">
@@ -26,8 +34,14 @@ $( document ).ready( function () {
 
 
         text: `<div class="action__field action__field--text">
-                <textarea name="" id="" cols="30" rows="10"></textarea>
-            </div>`
+                <textarea name="textarea" required ></textarea>
+            </div>`,
+
+        type: `<input type="text"
+        class="input__hidden"
+        name="type"
+        hidden
+        value="">`
     }
     $( '.doors__list' ).slick( {
         infinite: true,
@@ -87,7 +101,7 @@ $( document ).ready( function () {
     });
 
     $('.article__btn, .header__button, .get-information__btn, .services__btn').click(e => {
-        const type = $(e.target).data('type');
+        const typePopup = $(e.target).data('type');
 
         const dataObj = {
             question : {
@@ -95,82 +109,101 @@ $( document ).ready( function () {
                     'name',
                     'tel',
                     'email',
-                    'text'
+                    'text',
+                    'type'
                 ],
                 submitBtn: 'задать вопрос',
-                text: 'чтобы задать вопрос, и мы перезвоним Вам в течение 15 мин,чтобы'
+                text: 'чтобы задать вопрос, и мы перезвоним Вам в течение 15 мин,чтобы',
+                type: 'Задать вопрос'
             },
             callback: {
                 fields: [
                     'name',
-                    'tel'
+                    'tel',
+                    'type'
                 ],
                 submitBtn: 'перезвоните мне',
-                text: 'и наш менеджер перезвонит Вам в течение 15 мин, чтобы ответить на все вопросы'
+                text: 'и наш менеджер перезвонит Вам в течение 15 мин, чтобы ответить на все вопросы',
+                type: 'Обратный звонок'
             },
             consultation: {
                 fields: [
                     'name',
-                    'tel'
+                    'tel',
+                    'type'
                 ],
                 submitBtn: 'получить консультацию',
-                text: 'чтобы получить консультацию по индивидуальному заказу, и наш менеджер свяжеться с Вами в течение 15 мин'
+                text: 'чтобы получить консультацию по индивидуальному заказу, и наш менеджер свяжеться с Вами в течение 15 мин',
+                type: 'Консультацию'
             },
             catalog: {
                 fields: [
                     'name',
-                    'tel'
+                    'tel',
+                    'type'
                 ],
                 submitBtn: 'получить фотокаталог',
-                text: 'и мы отправим фотокаталог дверей с сценами на Вашу почту в течение 15 мин'
+                text: 'и мы отправим фотокаталог дверей с сценами на Вашу почту в течение 15 мин',
+                type: 'Получить фотокаталог'
             },
             individual: {
                 fields: [
                     'name',
-                    'tel'
+                    'tel',
+                    'type'
                 ],
                 submitBtn: 'получить консультацию',
-                text: 'чтобы получить консультацию по индивидуальному заказу, и наш менеджер свяжеться с Вами в течение 15 мин'
+                text: 'чтобы получить консультацию по индивидуальному заказу, и наш менеджер свяжеться с Вами в течение 15 мин',
+                type: 'Индивидуальный заказ'
             },
             price: {
                 fields: [
                     'name',
-                    'tel'
+                    'tel',
+                    'type'
                 ],
                 submitBtn: 'узнать стоимость',
-                text: 'чтобы узнать стоимость, и наш менеджер свяжеться с Вами в течение 15 мин'
+                text: 'чтобы узнать стоимость, и наш менеджер свяжеться с Вами в течение 15 мин',
+                type: 'Узнать стоимость'
             },
             master: {
                 fields: [
                     'name',
                     'tel',
-                    'email'
+                    'email',
+                    'type'
                 ],
                 submitBtn: 'вызвать мастера',
-                text: 'чтобы вызвать мастера на замер, и наш менеджер свяжеться с Вами в течение 15 мин'
+                text: 'чтобы вызвать мастера на замер, и наш менеджер свяжеться с Вами в течение 15 мин',
+                type: 'Вызвать мастера'
             },
             more: {
                 fields: [
                     'name',
                     'tel',
-                    'email'
+                    'email',
+                    'type'
                 ],
                 submitBtn: 'узнать подробнее',
-                text: 'чтобы узнать про изготовление под индивидуальный заказ, и наш менеджер свяжеться с Вами в течение 15 мин'
+                text: 'чтобы узнать про изготовление под индивидуальный заказ, и наш менеджер свяжеться с Вами в течение 15 мин',
+                type: 'Узнать подробнее'
             },
             order: {
                 fields: [
                     'name',
-                    'tel'
+                    'tel',
+                    'type'
                 ],
                 submitBtn: 'оставить заявку',
-                text: 'чтобы задать вопрос, и мы перезвоним Вам в течение 15 мин,чтобы'
+                text: 'чтобы задать вопрос, и мы перезвоним Вам в течение 15 мин,чтобы',
+                type: 'Оставить заявку'
             }
         }
 
-        $('.popup__wrapper .article__btn').text(dataObj[type].submitBtn);
-        $('.form__fileds-wrapper').html(addFields(dataObj[type].fields));
-        $('.popup__description').text(dataObj[type].text);
+        $('.popup__wrapper .popup__btn').text(dataObj[typePopup].submitBtn);
+        $('.form__fileds-wrapper').html(addFields(dataObj[typePopup].fields));
+        $('.input__hidden').val(dataObj[typePopup].type);
+        $('.popup__description').text(dataObj[typePopup].text);
         $('.popup__overlay, .popup__wrapper').css({ display: 'block' });
     });
 

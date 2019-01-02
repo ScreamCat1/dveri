@@ -17,11 +17,26 @@
           href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link rel="stylesheet"
           href="./styles/main.css">
-    <link rel="shortcut icon" sizes="16x16" href="/images/favs/fav_16.ico" type="image/x-icon">
-    <link rel="shortcut icon" sizes="48x48" href="/images/favs/fav_48.ico" type="image/x-icon">
-    <link rel="shortcut icon" sizes="57x57" href="/images/favs/fav_57.ico" type="image/x-icon">
-    <link rel="shortcut icon" sizes="72x72" href="/images/favs/fav_72.ico" type="image/x-icon">
-    <link rel="shortcut icon" sizes="114x114" href="/images/favs/fav_114.ico" type="image/x-icon">
+    <link rel="shortcut icon"
+          sizes="16x16"
+          href="/images/favs/fav_16.ico"
+          type="image/x-icon">
+    <link rel="shortcut icon"
+          sizes="48x48"
+          href="/images/favs/fav_48.ico"
+          type="image/x-icon">
+    <link rel="shortcut icon"
+          sizes="57x57"
+          href="/images/favs/fav_57.ico"
+          type="image/x-icon">
+    <link rel="shortcut icon"
+          sizes="72x72"
+          href="/images/favs/fav_72.ico"
+          type="image/x-icon">
+    <link rel="shortcut icon"
+          sizes="114x114"
+          href="/images/favs/fav_114.ico"
+          type="image/x-icon">
 
     <title>АЛЮМ</title>
 </head>
@@ -47,7 +62,8 @@
                    href="./ua">Укр</a>
                 <a class="header__phone"
                    href="tel:380001235878">+38 000 123 5678</a>
-                <button class="header__button" data-type="callback">Давайте мы перезвоним</button>
+                <button class="header__button"
+                        data-type="callback">Давайте мы перезвоним</button>
             </div>
         </div>
         <nav class="navigation container">
@@ -107,8 +123,10 @@
             </ul>
         </div>
         <div class="container get-information">
-            <button class="get-information__btn get-information__btn--red" data-type="individual">узнать про индивидуальный заказ дверей</button>
-            <button class="get-information__btn get-information__btn--blue" data-type="catalog">получить фотокаталог продукции</button>
+            <button class="get-information__btn get-information__btn--red"
+                    data-type="individual">узнать про индивидуальный заказ дверей</button>
+            <button class="get-information__btn get-information__btn--blue"
+                    data-type="catalog">получить фотокаталог продукции</button>
         </div>
     </header>
     <article class="container advantages article">
@@ -265,7 +283,8 @@
                             </li>
                         </ul>
                     </div>
-                    <button class="article__btn" data-type="price">Узнать стоимость</button>
+                    <button class="article__btn"
+                            data-type="price">Узнать стоимость</button>
                 </li>
 
                 <li class="row products__item">
@@ -335,7 +354,8 @@
                             </li>
                         </ul>
                     </div>
-                    <button class="article__btn" data-type="price">Узнать стоимость</button>
+                    <button class="article__btn"
+                            data-type="price">Узнать стоимость</button>
                 </li>
 
                 <li class="row products__item">
@@ -405,7 +425,8 @@
                             </li>
                         </ul>
                     </div>
-                    <button class="article__btn" data-type="price">Узнать стоимость</button>
+                    <button class="article__btn"
+                            data-type="price">Узнать стоимость</button>
                 </li>
             </ul>
 
@@ -414,19 +435,32 @@
                     <b>Заполните форму</b>, чтобы получить полный фотокаталог дверей
                     в частный дом на Вашу почту через 15 мин
                 </h3>
-                <form action=""
+                <form action="mail.php"
+                      method="post"
                       class="row container get-catalog__form">
                     <input class="col col-12 col-lg-2 get-catalog__field"
                            type="text"
+                           name="name"
+                           required
+                           minlength="2"
                            placeholder="Ваше имя">
                     <input class="col col-12 col-lg-3 get-catalog__field"
                            type="email"
+                           name="email"
+                           required
                            placeholder="Ваш e-mail">
                     <input class="col col-12 col-lg-2 get-catalog__field"
                            type="tel"
+                           name="tel"
+                           required
+                           minlength="5"
                            placeholder="Ваш телефон">
-                    <button type="submit get-catalog__field"
-                            class="article__btn" >получить фотокаталог</button>
+                    <input type="text"
+                           name="type"
+                           hidden
+                           value="Получить фотокаталог">
+                    <button type="submit"
+                            class="popup__btn">получить фотокаталог</button>
                 </form>
             </div>
 
@@ -498,7 +532,8 @@
                             </li>
                         </ul>
                     </div>
-                    <button class="article__btn" data-type="price">Узнать стоимость</button>
+                    <button class="article__btn"
+                            data-type="price">Узнать стоимость</button>
                 </li>
 
                 <li class="row products__item">
@@ -568,7 +603,8 @@
                             </li>
                         </ul>
                     </div>
-                    <button class="article__btn" data-type="price">Узнать стоимость</button>
+                    <button class="article__btn"
+                            data-type="price">Узнать стоимость</button>
                 </li>
 
                 <li class="row products__item">
@@ -638,7 +674,8 @@
                             </li>
                         </ul>
                     </div>
-                    <button class="article__btn" data-type="price">Узнать стоимость</button>
+                    <button class="article__btn"
+                            data-type="price">Узнать стоимость</button>
                 </li>
             </ul>
 
@@ -647,19 +684,32 @@
                     <b>Заполните форму</b>, чтобы получить полный фотокаталог дверей
                     в частный дом на Вашу почту через 15 мин
                 </h3>
-                <form action=""
+                <form action="mail.php"
+                      method="post"
                       class="row container get-catalog__form">
                     <input class="col col-12 col-lg-2 get-catalog__field"
                            type="text"
+                           name="name"
+                           required
+                           minlength="2"
                            placeholder="Ваше имя">
                     <input class="col col-12 col-lg-3 get-catalog__field"
                            type="email"
+                           name="email"
+                           required
                            placeholder="Ваш e-mail">
                     <input class="col col-12 col-lg-2 get-catalog__field"
                            type="tel"
+                           name="tel"
+                           required
+                           minlength="5"
                            placeholder="Ваш телефон">
-                    <button type="submit get-catalog__field"
-                            class="article__btn" >получить фотокаталог</button>
+                    <input type="text"
+                           name="type"
+                           hidden
+                           value="Получить фотокаталог">
+                    <button type="submit"
+                            class="popup__btn">получить фотокаталог</button>
                 </form>
             </div>
 
@@ -799,7 +849,8 @@
                                 вместе с менеджером выбрать нужную модель, которая в точности будет соответствовать
                                 Вашим ожиданиям после установки.
                             </p>
-                            <button class="services__btn" data-type="consultation">Получить бесплатную консультацию</button>
+                            <button class="services__btn"
+                                    data-type="consultation">Получить бесплатную консультацию</button>
                         </figcaption>
                     </figure>
                 </li>
@@ -822,7 +873,8 @@
                                 срок специалист приедет на замер и покажет самые оптимальные модели дверей из каталога,
                                 под Ваши потребности.
                             </p>
-                            <button class="services__btn" data-type="master">Вызвать мастера на замер</button>
+                            <button class="services__btn"
+                                    data-type="master">Вызвать мастера на замер</button>
                         </figcaption>
                     </figure>
                 </li>
@@ -844,7 +896,8 @@
                                 функциональности под Ваши потребности и интерьер. Вы получите уникальный дизайн,
                                 а производство займет всего до 7 дней.
                             </p>
-                            <button class="services__btn" data-type="individual">узнать про индивидуальный заказ</button>
+                            <button class="services__btn"
+                                    data-type="individual">узнать про индивидуальный заказ</button>
                         </figcaption>
                     </figure>
                 </li>
@@ -866,7 +919,8 @@
                                 конструкции
                                 и займет всего до 2 часов. После установки Вы сразу можете пользоваться новой дверью..
                             </p>
-                            <button class="services__btn" data-type="more">Узнать подробнее</button>
+                            <button class="services__btn"
+                                    data-type="more">Узнать подробнее</button>
                         </figcaption>
                     </figure>
                 </li>
@@ -1023,9 +1077,13 @@
                         сертификат на <b>1 000 грн</b>
                         на покупку дверей
                     </p>
-                    <form action="">
+                    <form action="mail.php"
+                          method="post">
                         <div class="action__field">
                             <input type="text"
+                                   name="name"
+                                   required
+                                   minlength="2"
                                    placeholder="Ваше имя">
                             <img class="action__icon"
                                  src="./images/name-icon.png"
@@ -1033,21 +1091,30 @@
                         </div>
                         <div class="action__field">
                             <input type="tel"
+                                   name="tel"
+                                   minlength="5"
+                                   required
                                    placeholder="Ваш телефон">
                             <img class="action__icon"
                                  src="./images/phone-icon.png"
                                  alt="">
                         </div>
                         <div class="action__field">
-                            <input type="mail"
-                                   placeholder="Ваш телефон">
+                            <input type="email"
+                                   name="email"
+                                   required
+                                   placeholder="Ваш e-mail">
                             <img class="action__icon"
                                  src="./images/mail-icon.png"
                                  alt="">
                         </div>
+                        <input type="text"
+                               name="type"
+                               hidden
+                               value="Получить сертификат">
                         <div class="action__field">
                             <button type="submit"
-                                    class="article__btn">получить сертификат</button>
+                                    class="popup__btn">получить сертификат</button>
                         </div>
                     </form>
                 </div>
@@ -1173,7 +1240,8 @@
                             в течение 15 мин, чтобы проконсультировать Вас
                         </figcaption>
                     </figure>
-                    <button class="article__btn" data-type="order">оставить заявку</button>
+                    <button class="article__btn"
+                            data-type="order">оставить заявку</button>
                 </li>
 
                 <li class="col-12 col-lg-6 create-order__item">
@@ -1259,7 +1327,8 @@
                             </p>
                         </li>
                         <li class="contacts__item">
-                            <button class="article__btn" data-type="question">задать вопрос</button>
+                            <button class="article__btn"
+                                    data-type="question">задать вопрос</button>
                         </li>
                     </ul>
                 </div>
@@ -1292,7 +1361,7 @@
                 <li class="col-6 col-lg-2 text-right footer__item created-by">
                     <div>Проект разработан:</div>
                     <a class="footer__link"
-                       href="">КнБ Studio</a>
+                       href="https://www.facebook.com/%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82-%D0%BC%D0%B0%D1%80%D0%BA%D0%B5%D1%82%D0%B8%D0%BD%D0%B3-%D0%BF%D0%BE%D0%B4-%D0%BA%D0%BB%D1%8E%D1%87-%D0%BE%D1%82-%D0%9A%D0%BD%D0%91-Studio-1833190753598670/">КнБ Studio</a>
                 </li>
             </ul>
         </footer>
@@ -1307,11 +1376,12 @@
         <p class="popup__description">
 
         </p>
-        <form action="">
+        <form action="mail.php"
+              method="post">
             <div class="form__fileds-wrapper"></div>
             <div class="action__field">
                 <button type="submit"
-                        class="article__btn">получить сертификат</button>
+                        class="popup__btn"></button>
             </div>
         </form>
         <button class="popup__close"></button>

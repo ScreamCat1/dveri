@@ -3,11 +3,6 @@
   src: url("../fonts/pfagorasanspro-reg.ttf");
 }
 
-@font-face {
-  font-family: 'pfagorasansbold';
-  src: url("../fonts/pfagorasanspro-bold.ttf");
-}
-
 :root, html {
   font-family: 'pfagorasans' !important;
   font-size: 18px !important;
@@ -1141,9 +1136,13 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 370px;
-  height: 600px;
   background-color: white;
+}
+
+.doors__item > img {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .arrow {
@@ -1225,6 +1224,28 @@ body {
   color: white;
 }
 
+.popup__btn {
+  width: 270px;
+  height: 60px;
+  border-radius: 30px;
+  border: 0;
+  cursor: pointer;
+  background-color: #d8315b;
+  -webkit-box-shadow: 0 2px 18px rgba(215, 48, 90, 0.55);
+          box-shadow: 0 2px 18px rgba(215, 48, 90, 0.55);
+  background-image: -webkit-gradient(linear, left top, right top, from(#8d0023), to(#d8315b));
+  background-image: linear-gradient(to right, #8d0023 0%, #d8315b 100%);
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.popup__btn:hover {
+  background-color: #8d0024;
+  background-image: none;
+}
+
 .form__field {
   position: relative;
   width: 270px;
@@ -1282,6 +1303,9 @@ body {
     display: flex;
     -ms-flex-pack: distribute;
         justify-content: space-around;
+  }
+  .reviews__count-item {
+    margin-right: 5px;
   }
   .order__wrapper::before {
     display: none;
@@ -1425,5 +1449,42 @@ body {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
   }
+}
+
+.thanks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0;
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-image: url("../images/thanks_bg.png");
+  background-size: cover;
+  color: white;
+  text-align: center;
+}
+
+.thanks__title {
+  margin-bottom: 40px;
+  font-size: 48px;
+}
+
+.thanks__subtitle {
+  max-width: 500px;
+  font-size: 24px;
+  line-height: 34px;
 }
 /*# sourceMappingURL=main.css.map */
