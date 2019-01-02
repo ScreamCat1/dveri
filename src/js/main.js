@@ -54,6 +54,14 @@ $( document ).ready( function () {
     });
 
 
+    $('.navigation__link').click(function(e) {
+        $('html, body').animate({
+            scrollTop: $(`.${e.target.href.split('#')[1]}`).offset().top
+        }, 500);
+        return false;
+    });
+
+
     (function setCountDown () {
         const finishedData = new Date('2017', '0', '1', '0', '0');
         const date = new Date();
