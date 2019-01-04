@@ -67,6 +67,27 @@ $( document ).ready( function () {
         prevArrow: '<button class="arrow arrow--prev"></button>'
     });
 
+    $('.reviews__count-item').click(e => {
+        $('.reviews__count-item').removeClass('reviews__count-item--active');
+        $(e.target).addClass('reviews__count-item--active');
+        $('.reviews__list')[0].slick.slickGoTo(parseInt(e.target.innerText));
+    });
+    $('.reviews__list').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+        $('.reviews__count-item').removeClass('reviews__count-item--active');
+        $(`.reviews__count-item:nth-child(${nextSlide + 1})`).addClass('reviews__count-item--active');
+      });
+
+    $('.examples__count-item').click(e => {
+        $('.examples__count-item').removeClass('examples__count-item--active');
+        $(e.target).addClass('examples__count-item--active');
+        $('.examples__list')[0].slick.slickGoTo(parseInt(e.target.innerText));
+    });
+
+    $('.examples__list').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+        $('.examples__count-item').removeClass('examples__count-item--active');
+        $(`.examples__count-item:nth-child(${nextSlide + 1})`).addClass('examples__count-item--active');
+      });
+
 
     $('.navigation__link').click(function(e) {
         $('html, body').animate({

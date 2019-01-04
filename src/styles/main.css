@@ -809,6 +809,14 @@ body {
   border-radius: 0 0 60px 0;
 }
 
+.examples__count-item {
+  cursor: pointer;
+}
+
+.examples__count-item--active {
+  font-weight: bold;
+}
+
 .examples__list {
   padding: 0;
   list-style: none;
@@ -1031,6 +1039,14 @@ body {
   list-style: none;
   color: #313131;
   line-height: 36px;
+}
+
+.reviews__count-item {
+  cursor: pointer;
+}
+
+.reviews__count-item--active {
+  font-weight: bold;
 }
 
 .create-order__list {

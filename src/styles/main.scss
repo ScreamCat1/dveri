@@ -798,6 +798,14 @@ body {
         border-radius: 0 0 60px 0;
     }
 
+    &__count-item {
+        cursor: pointer;
+
+        &--active {
+            font-weight: bold;
+        }
+    }
+
     &__list {
         padding: 0;
         list-style: none;
@@ -1025,6 +1033,14 @@ body {
 
         color: #313131;
         line-height: 36px;
+    }
+
+    &__count-item {
+        cursor: pointer;
+
+        &--active {
+            font-weight: bold;
+        }
     }
 }
 
@@ -1416,6 +1432,7 @@ body {
 
     .reviews__count-item {
         margin-right: 5px;
+
     }
 
     .order__wrapper::before {
