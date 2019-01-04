@@ -3,7 +3,7 @@
   src: url("../fonts/pfagorasanspro-reg.ttf");
 }
 
-:root, html {
+:root, html, body {
   font-family: 'pfagorasans' !important;
   font-size: 18px !important;
 }
@@ -103,7 +103,7 @@ body {
 
 .header__button {
   width: 270px;
-  height: 55px;
+  height: 56px;
   border-radius: 26px;
   border: 0;
   background-color: rgba(11, 39, 103, 0.7);
@@ -155,6 +155,7 @@ body {
   font-size: 14px;
   font-weight: 700;
   color: #b6b6b6;
+  text-transform: uppercase;
 }
 
 .navigation__link--active, .navigation__link:hover {
@@ -207,6 +208,7 @@ body {
 .adv__description {
   color: #4c4c4c;
   font-weight: 700;
+  line-height: 1.35;
 }
 
 .get-information {
@@ -318,12 +320,35 @@ body {
   position: absolute;
   top: 40px;
   content: '';
-  z-index: -1;
+  z-index: -2;
   left: calc((100% - 770px)/2);
   width: 770px;
   height: 1500px;
   background-color: #0b2869;
+}
+
+.advantages__list::before {
+  position: absolute;
+  top: 40px;
+  left: calc((100% - 770px)/2);
+  z-index: -1;
+  content: '';
+  width: 770px;
+  height: 1500px;
   background-image: url("../images/advantage-bg.png");
+  opacity: 0.3;
+}
+
+.advantages__item:first-child {
+  margin-left: -20px;
+}
+
+.advantages__item:nth-child(2) {
+  margin-right: -40px;
+}
+
+.advantages__item:nth-child(4) {
+  margin-right: -50px;
 }
 
 .advantages__figure {
@@ -351,7 +376,7 @@ body {
 
 .advantages__figcaption--first {
   max-width: 486px;
-  margin-left: 10px;
+  margin-left: 30px;
 }
 
 .advantages__figcaption--second {
@@ -360,13 +385,13 @@ body {
 }
 
 .advantages__figcaption--third {
-  max-width: 370px;
+  max-width: 375px;
   margin-left: 10px;
 }
 
 .advantages__figcaption--fourth {
   max-width: 398px;
-  margin-right: 5px;
+  margin-right: 68px;
 }
 
 .advantages__figure-title {
@@ -377,7 +402,6 @@ body {
 }
 
 .advantages__figure-description {
-  margin-bottom: 28px;
   color: #ffffff;
   line-height: 28px;
 }
@@ -386,6 +410,7 @@ body {
   content: '';
   display: block;
   max-width: 370px;
+  margin-top: 28px;
   width: 100%;
   height: 1px;
   background-color: #ead64b;
@@ -532,10 +557,21 @@ body {
   content: '';
   position: absolute;
   display: block;
-  background-image: url("../images/privilage-door.jpg");
+  background-image: url("../images/privilage-door.jpg"), url("../images/privilege-circle.png");
   height: 585px;
   width: 293px;
   left: calc(100%/2 - 132px);
+}
+
+.privilege__list::after {
+  content: '';
+  z-index: -2;
+  position: absolute;
+  display: block;
+  background-image: url("../images/privilege-circle.png");
+  height: 501px;
+  width: 501px;
+  left: calc(100%/2 - 251px);
 }
 
 .privilege__item {
@@ -554,7 +590,6 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-right: -33px;
 }
 
 .privilege__figure--reverse {
@@ -572,8 +607,10 @@ body {
 }
 
 .privilege__title {
+  margin-bottom: 20px;
   color: #313131;
   font-size: 24px;
+  font-weight: bold;
 }
 
 .privilege__text {
@@ -631,9 +668,21 @@ body {
   padding-left: 10px;
 }
 
+.services figcaption {
+  margin-bottom: -50px;
+}
+
 .services__list {
   padding: 0;
   list-style: none;
+}
+
+.services__item:first-child {
+  margin-top: -60px;
+}
+
+.services__item--third figcaption {
+  margin-bottom: 0;
 }
 
 .services__img {
@@ -645,7 +694,6 @@ body {
 
 .services__img--reverse {
   margin-right: 0;
-  margin-left: -80px;
 }
 
 .services__reverse {
@@ -655,11 +703,16 @@ body {
           flex-direction: row-reverse;
 }
 
+.services__reverse--custom figcaption {
+  margin-bottom: 0px;
+}
+
 .services__title {
   margin-bottom: 34px;
   margin-left: -196px;
   color: #313131;
   font-size: 30px;
+  font-weight: bold;
 }
 
 .services__title--reverse {
@@ -669,7 +722,7 @@ body {
 }
 
 .services__title--custom {
-  margin-right: -70px;
+  margin-right: -130px;
 }
 
 .services__subtitle {
@@ -682,8 +735,8 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 13px;
   font-size: 24px;
+  font-weight: normal;
 }
 
 .services__subtitle::before {
@@ -709,9 +762,13 @@ body {
 }
 
 .services__text {
-  margin-bottom: 34px;
   color: #313131;
   line-height: 28px;
+}
+
+.services__text--reverse {
+  max-width: 470px;
+  text-align: right;
 }
 
 .services__btn {
@@ -721,6 +778,7 @@ body {
           box-shadow: 0 2px 18px rgba(13, 42, 108, 0.55);
   border: 0;
   border-radius: 30px;
+  margin-top: 30px;
   cursor: pointer;
   background-color: #293363;
   background-image: -webkit-gradient(linear, left top, right top, from(#0a2463), to(#2f7ddf));
@@ -744,6 +802,7 @@ body {
   list-style: none;
   padding: 40px 93px;
   width: 208px;
+  height: 435px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border: 10px solid #ffd11b;
@@ -753,14 +812,32 @@ body {
 .examples__list {
   padding: 0;
   list-style: none;
-  margin-bottom: 170px;
+  margin-bottom: 220px;
+}
+
+.examples .arrow--next {
+  z-index: 2;
+  bottom: 0;
+  margin-right: -380px;
+}
+
+.examples .arrow--prev {
+  z-index: 2;
+  bottom: 0;
+  margin-right: -370px;
+}
+
+.examples__title {
+  margin-left: 30px;
 }
 
 .action__subtitle {
+  margin-top: 89px;
   margin-bottom: 75px;
   color: #d42e59;
   font-size: 130px;
   font-weight: 700;
+  line-height: 1;
 }
 
 .action__title {
@@ -1075,8 +1152,13 @@ body {
 }
 
 .order__wrapper {
+  z-index: 0;
   position: relative;
   overflow-x: hidden;
+  margin-top: -50px;
+  background-image: url("../images/action-girl.png");
+  background-repeat: no-repeat;
+  background-position: top center;
 }
 
 .order__wrapper::after {
@@ -1136,13 +1218,16 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: white;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .doors__item > img {
   width: 100%;
   -o-object-fit: contain;
      object-fit: contain;
+  -webkit-box-shadow: 5px -5px 21px rgba(0, 0, 0, 0.1);
+          box-shadow: 5px -5px 21px rgba(0, 0, 0, 0.1);
 }
 
 .arrow {
