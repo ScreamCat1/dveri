@@ -21,14 +21,30 @@ body {
 
 .header__container::after {
   position: absolute;
-  right: -400px;
-  top: -245px;
-  z-index: -3;
+  right: 0;
+  top: 0;
+  z-index: -4;
   content: '';
   display: block;
-  width: 2199px;
-  height: 1076px;
-  background-image: url("../images/header-bg.png");
+  left: 0;
+  bottom: 0;
+  background-image: url("../images/header-bg-new.png");
+  background-position: right top;
+  background-size: cover;
+}
+
+.header__container::before {
+  position: absolute;
+  right: 17.6%;
+  z-index: -3;
+  content: '';
+  top: 235px;
+  width: 559px;
+  height: 518px;
+  display: block;
+  background-image: url("../images/family.png");
+  background-position: right top;
+  background-size: contain;
 }
 
 .header__wrapper {
@@ -352,6 +368,14 @@ body {
 
 .advantages__item:nth-child(4) {
   margin-right: -50px;
+}
+
+.advantages__item:nth-child(4) .advantages__figure--reverse {
+  margin-top: -30px;
+}
+
+.advantages__item:nth-child(3) .advantages__figure {
+  margin-top: -50px;
 }
 
 .advantages__figure {
@@ -1361,6 +1385,15 @@ body {
   color: #fff;
 }
 
+@media (max-width: 1300px) {
+  .header__container::before {
+    right: 10%;
+  }
+  .header__wrapper {
+    top: 585px;
+  }
+}
+
 @media (max-width: 1200px) {
   .reviews__text {
     padding-left: 370px;
@@ -1376,6 +1409,9 @@ body {
 }
 
 @media (max-width: 1000px) {
+  .header__container::before {
+    display: none;
+  }
   .reviews__figure {
     margin-bottom: 0;
   }
